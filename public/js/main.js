@@ -10,7 +10,7 @@ function urltoFile(url, filename, mimeType){
 function convert64(){
     var code = codeB64.value;
 
-    urltoFile('', 'image.png')
+    urltoFile(code, 'image.png')
     .then(function(file){
         console.log(file);
     })
