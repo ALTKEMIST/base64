@@ -12,6 +12,6 @@ function convert64(){
 
     urltoFile(code, 'image.png')
     .then(function(file){
-        console.log(file);
+        document.getElementById("image").innerHTML = "<img src='"+code+"' class='img-fluid' />"
     })
 }
