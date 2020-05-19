@@ -1,0 +1,5 @@
+textarea {
+    resize: none;
+    border: 1 solid black;
+    width: 100%;
+  }
