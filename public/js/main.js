@@ -10,8 +10,17 @@ function urltoFile(url, filename, mimeType){
 function convert64(){
     var code = codeB64.value;
 
-    urltoFile(code, 'image.png')
-    .then(function(file){
-        document.getElementById("image").innerHTML = "<img src='"+code+"' class='img-fluid' />"
-    })
+    try{
+        urltoFile(code, 'image.png')
+        .then(function(file){
+            document.getElementById("image").innerHTML = "<img src='"+code+"' class='img-fluid' />"
+        })    
+        alert("The image has been successfully generated.");
+    }
+    catch (error){
+        alert("An unexpected error has occurred.");
+        console.error(error);
+    }
+    
+    
 }
