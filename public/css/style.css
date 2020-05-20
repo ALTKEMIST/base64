@@ -3,3 +3,15 @@ textarea {
     border: 1 solid black;
     width: 100%;
   }
+
+  a{
+      text-decoration: none;
+  }
+
+  a:hover{
+      text-decoration: none;
+  }
+
+  a:visited{
+      text-decoration: none;
+  }

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./public/vendor/bulma/mybulma/css/mystyles.css">
+    <link rel="stylesheet" href="./public/vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./public/vendor/fontawesome_5_13_0/css/all.min.css">
+    <link rel="stylesheet" href="./public/css/style.css">
+
+    <title>Base64 Converter</title>
+</head>
+<body>
+
+
+    <div class="container">
+        <div class="row mt-3">
+            <div class="col-10 offset-1 text-center h2">
+                Base64 to Image
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-5 offset-1">
+                <a href="index.html"><button type="button" class="btn btn-block btn-outline-success">Base64 to Image</button></a>
+            </div>
+            <div class="col-5">
+                <a href="#"><button type="button" class="btn btn-block btn-success">Image to Base64</button></a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-10 offset-1 text-center">
+                <div id="div-img" class="file has-name is-fullwidth is-success">
+                    <label class="file-label">
+                        <input class="file-input" type="file" id="imagen" accept="image/*" onchange="picload()" crossOrigin="anonymous">
+                        <span class="file-cta">
+                            <span class="file-icon">
+                                <i class="fas fa-upload"></i>
+                            </span>
+                            <span class="file-label">
+                                Select image file...
+                            </span>
+                        </span>
+                        <span class="file-name">
+                            No image selected.
+                        </span>
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-2">
+            <div class="col-10 offset-1">
+                <textarea name="codeB64" readonly id="codeB64" cols="30" rows="10"></textarea>
+            </div>
+        </div>
+
+        <div class="row mt-2 mb-3">
+            <div class="col-10 offset-1">
+                <button class="btn btn-block btn-outline-primary copyButton" id="copyButtonId" data-id="@item.Type" data-clipboard-action="copy" data-clipboard-target="#codeB64">Copy to clipboard</button>
+            </div>
+        </div>
+    </div>
+
+    <!--Scripts-->
+    <script src="./public/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <script src="./public/vendor/popper/popper.min.js"></script>
+    <script src="./public/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="./public/vendor/clipboardjs/clipboard.min.js"></script>
+    <script src="./public/js/main.js"></script>
+
+</body>
+</html>
